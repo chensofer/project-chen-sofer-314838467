@@ -81,7 +81,7 @@ h3 {
 }
 
 .top-nav a:hover {
-  background: rgba(255, 255, 255, .15)
+  background: rgba(255, 255, 255, .15);
 }
 
 .top-nav a.active {
@@ -114,7 +114,7 @@ textarea {
 
 textarea {
   min-height: 80px;
-  resize: vertical
+  resize: vertical;
 }
 
 .radio-group {

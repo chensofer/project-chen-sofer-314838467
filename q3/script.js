@@ -242,32 +242,32 @@ function buildCard(obj) {
 
   card.innerHTML =
     '<h3 class="title-line">' +
-      '<span class="field">שם המופע:</span>' +
-      '<span class="show-name">' + obj.showName + '</span>' +
+    '<span class="field">שם המופע:</span>' +
+    '<span class="show-name">' + obj.showName + '</span>' +
     '</h3>' +
 
     '<span class="badge status-badge ' + statusMap[(obj.status || 'waiting')].cls + '">' +
-      statusMap[(obj.status || 'waiting')].txt +
+    statusMap[(obj.status || 'waiting')].txt +
     '</span>' +
 
     '<div class="submitted-lines">' +
-      '<p class="info-row"><span class="field">הוגש על ידי:</span><span class="value name">' + obj.fullName + '</span>' +
-      '<p class="info-row"><span class="field">אימייל:</span> <span class="value email">' + obj.email + '</span>' +
-      '<p class="info-row"><span class="field">רגש מרכזי:</span> ' + (emotionsMap[obj.emotion] || '') + '</p>' +
-      '<p class="info-row"><span class="field">אופי ההשתתפות:</span> ' + (participationMap[obj.participation] || '') + '</p>' +
-      '<p class="info-row"><span class="field">משך זמן מופע  משוער:</span> ' + obj.duration + ' דקות</p>' +
-      '<p class="info-row"><span class="field">מגבלת גיל:</span> ' + (obj.ageRestrict === "yes" ? (obj.ageMin + "+") : "ללא מגבלת גיל") + '</p>' +
-      (obj.description ? '<p class="info-row"><span class="field">תיאור:</span> ' + obj.description + '</p>' : '') +
+    '<p class="info-row"><span class="field">הוגש על ידי:</span><span class="value name">' + obj.fullName + '</span>' +
+    '<p class="info-row"><span class="field">אימייל:</span> <span class="value email">' + obj.email + '</span>' +
+    '<p class="info-row"><span class="field">רגש מרכזי:</span> ' + (emotionsMap[obj.emotion] || '') + '</p>' +
+    '<p class="info-row"><span class="field">אופי ההשתתפות:</span> ' + (participationMap[obj.participation] || '') + '</p>' +
+    '<p class="info-row"><span class="field">משך זמן מופע  משוער:</span> ' + obj.duration + ' דקות</p>' +
+    '<p class="info-row"><span class="field">מגבלת גיל:</span> ' + (obj.ageRestrict === "yes" ? (obj.ageMin + "+") : "ללא מגבלת גיל") + '</p>' +
+    (obj.description ? '<p class="info-row"><span class="field">תיאור:</span> ' + obj.description + '</p>' : '') +
     '</div>' +
 
     '<div class="card-actions">' +
-      '<label class="field" for="status-' + obj.id + '">סטטוס:</label>' +
-      '<select id="status-' + obj.id + '" class="statusSelect short">' +
-        '<option value="waiting" '  + (((obj.status || "waiting") === "waiting")  ? "selected" : "") + '>ממתינה</option>' +
-        '<option value="approved" ' + (((obj.status || "waiting") === "approved") ? "selected" : "") + '>מאושרת</option>' +
-        '<option value="rejected" ' + (((obj.status || "waiting") === "rejected") ? "selected" : "") + '>נדחתה</option>' +
-      '</select>' +
-      '<button class="btn-delete btnDelete" type="button">מחק</button>' +
+    '<label class="field" for="status-' + obj.id + '">סטטוס:</label>' +
+    '<select id="status-' + obj.id + '" class="statusSelect short">' +
+    '<option value="waiting" ' + (((obj.status || "waiting") === "waiting") ? "selected" : "") + '>ממתינה</option>' +
+    '<option value="approved" ' + (((obj.status || "waiting") === "approved") ? "selected" : "") + '>מאושרת</option>' +
+    '<option value="rejected" ' + (((obj.status || "waiting") === "rejected") ? "selected" : "") + '>נדחתה</option>' +
+    '</select>' +
+    '<button class="btn-delete btnDelete" type="button">מחק</button>' +
     '</div>';
 
   return card;
@@ -287,10 +287,10 @@ function renderStats() {
     (items.length === 0 ? '<p class="muted">אין עדיין הצעות במערכת.</p>' : '') +
     '<p class="stats-header"> סה"כ ספירת ההצעות לפי סוג רגש:</p>' +
     '<ul class="stats-list">' +
-      '<li>פחד: <b>'    + counts.fear      + '</b></li>' +
-      '<li>שמחה: <b>'   + counts.joy       + '</b></li>' +
-      '<li>בלבול: <b>'  + counts.confusion + '</b></li>' +
-      '<li>געגוע: <b>'  + counts.longing   + '</b></li>' +
+    '<li>פחד: <b>' + counts.fear + '</b></li>' +
+    '<li>שמחה: <b>' + counts.joy + '</b></li>' +
+    '<li>בלבול: <b>' + counts.confusion + '</b></li>' +
+    '<li>געגוע: <b>' + counts.longing + '</b></li>' +
     '</ul>';
 }
 
