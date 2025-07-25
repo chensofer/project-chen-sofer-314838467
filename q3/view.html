@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ניהול וצפייה בהצעות - קרקס הרגשות</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <nav class="top-nav">
+        <div class="nav-inner">
+            <a href="index.html">הגשת מופע</a>
+            <a href="view.html" class="active">ניהול/צפייה בהצעות</a>
+        </div>
+    </nav>
+
+    <main class="page-wrapper">
+        <h1>ניהול וצפייה בהצעות שנשמרו</h1>
+
+        <section id="manageSection">
+            <div class="manage-layout">
+                <div class="main-col">
+
+                    <div id="filters" class="filters-bar">
+                        <label for="filterEmotion">סינון לפי רגש מרכזי:</label>
+                        <select id="filterEmotion">
+                            <option value="all">ללא סינון</option>
+                            <option value="fear">פחד</option>
+                            <option value="joy">שמחה</option>
+                            <option value="confusion">בלבול</option>
+                            <option value="longing">געגוע</option>
+                        </select>
+
+                        <label for="filterStatus">סינון לפי סטטוס הצעה:</label>
+                        <select id="filterStatus">
+                            <option value="all">ללא סינון</option>
+                            <option value="waiting">ממתינה</option>
+                            <option value="approved">מאושרת</option>
+                            <option value="rejected">נדחתה</option>
+                        </select>
+                    </div>
+
+                    <div id="itemsContainer"></div>
+                </div>
+
+                <aside class="stats-side">
+                    <div id="statsBox" class="stats-box hidden"></div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

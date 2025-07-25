@@ -1,0 +1,64 @@
+html { direction: rtl; }
+
+.page-bg { background-color: #f8f9fa; }
+
+.section-pad {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.menu-title {
+  text-align: center;
+  margin-bottom: 48px;
+  color: #272c31;
+  font-weight: bold;
+}
+
+.menu-row {
+  margin-bottom: 48px;
+  justify-content: center;
+}
+
+.menu-card { margin-bottom: 24px; }
+
+.subtitle {
+  color: #3b3f42;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.price { font-weight: bold; }
+
+.full-height { height: 100%; }
+
+.card {
+  border: 1px solid #dee2e6;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(20, 20, 20, 0.15);
+}
+
+.card-body { text-align: right; }
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #0a2846;
+}
+
+.card-text {
+  font-size: 15px;
+  color: #333639;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.subtitle.cat-main       { color:#d83c3c; }   
+.subtitle.cat-starter    { color:#ec6b6b; }   
+.subtitle.cat-dessert    { color:#922500; }   

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>הצעת מופע - קרקס הרגשות</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="top-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="active">הגשת מופע</a>
+      <a href="view.html">ניהול וצפייה בהצעות</a>
+    </div>
+  </nav>
+
+  <main class="page-wrapper">
+    <h1 class="form-title">טופס הצעת רעיון למופע בקרקס הרגשות הנודד </h1>
+    <div class="form-layout">
+
+      <form id="showForm" novalidate class="card form-card">
+        <div class="form-group">
+          <label for="fullName">שם מלא של מציע/ת הרעיון *</label>
+          <input type="text" id="fullName" name="fullName" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">אימייל יוצר/ת הרעיון *</label>
+          <input type="email" id="email" name="email" />
+        </div>
+
+        <div class="form-group">
+          <label for="showName">שם המופע *</label>
+          <input type="text" id="showName" name="showName" />
+        </div>
+
+        <div class="form-group">
+          <label for="emotion">הרגש המרכזי של המופע *</label>
+          <select id="emotion" name="emotion">
+            <option value="">בחר רגש:</option>
+            <option value="fear">פחד</option>
+            <option value="joy">שמחה</option>
+            <option value="confusion">בלבול</option>
+            <option value="longing">געגוע</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>האם המופע מצריך השתתפות או רק צפייה? *</label>
+          <div class="radio-group" id="participationGroup">
+            <label><input type="radio" name="participation" value="active" /> השתתפות פעילה</label>
+            <label><input type="radio" name="participation" value="view" /> צפייה בלבד</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="equipment">מהו הציוד הנדרש למופע (במידה ויש)?</label>
+          <textarea id="equipment" name="equipment"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="duration">משך זמן מופע מוערך (בדקות) *</label>
+          <input type="number" id="duration" name="duration" min="1" max="480" step="1" inputmode="numeric" />
+        </div>
+
+        <div class="form-group">
+          <label>האם קיימת מגבלת גיל? *</label>
+          <div class="radio-group">
+            <label><input type="radio" name="ageRestrict" value="no" /> אין מגבלה</label>
+            <label><input type="radio" name="ageRestrict" value="yes" /> יש מגבלה</label>
+          </div>
+        </div>
+
+        <div id="ageLimitWrap" class="form-group hidden">
+          <label for="ageLimit">גיל מינימלי (בשנים):</label>
+          <input type="number" id="ageLimit" min="1" max="120" step="1" />
+        </div>
+
+        <div class="form-group">
+          <label for="description">תיאור קצר של המופע</label>
+          <textarea id="description" name="description"></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary">שליחת ההצעה</button>
+
+        <div id="errorsBox" class="alert alert-danger hidden">
+          <ul id="errorsList"></ul>
+        </div>
+
+        <div id="successBox" class="alert alert-success hidden"></div>
+      </form>
+
+      <aside class="circus-pics">
+        <img src="images/circo1.jpg" alt="קרקס - תמונה 1">
+        <img src="images/circo2.jpg" alt="קרקס - תמונה 2">
+      </aside>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
