@@ -285,7 +285,7 @@ function renderStats() {
 
   statsBox.innerHTML =
     (items.length === 0 ? '<p class="muted">אין עדיין הצעות במערכת.</p>' : '') +
-    '<p class="stats-header">מספר הצעות לפי רגש מרכזי:</p>' +
+    '<p class="stats-header"> סה"כ ספירת ההצעות לפי סוג רגש:</p>' +
     '<ul class="stats-list">' +
       '<li>פחד: <b>'    + counts.fear      + '</b></li>' +
       '<li>שמחה: <b>'   + counts.joy       + '</b></li>' +
