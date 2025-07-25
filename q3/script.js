@@ -151,6 +151,8 @@ function onSubmitForm(e) {
     ageRestrict: ageRestrictSelected ? ageRestrictSelected.value : '',
     ageMin: (ageRestrictSelected && ageRestrictSelected.value === 'yes') ? ageLimitEl.value.trim() : '',
     description: descriptionEl ? descriptionEl.value.trim() : '',
+    equipment: document.getElementById('equipment')?.value.trim() || '',
+
     status: 'waiting'
   };
 
@@ -258,6 +260,7 @@ function buildCard(obj) {
     '<p class="info-row"><span class="field">משך זמן מופע  משוער:</span> ' + obj.duration + ' דקות</p>' +
     '<p class="info-row"><span class="field">מגבלת גיל:</span> ' + (obj.ageRestrict === "yes" ? (obj.ageMin + "+") : "ללא מגבלת גיל") + '</p>' +
     (obj.description ? '<p class="info-row"><span class="field">תיאור:</span> ' + obj.description + '</p>' : '') +
+    (obj.equipment ? '<p class="info-row"><span class="field">ציוד נדרש:</span> ' + obj.equipment + '</p>' : '') +
     '</div>' +
 
     '<div class="card-actions">' +
@@ -269,6 +272,7 @@ function buildCard(obj) {
     '</select>' +
     '<button class="btn-delete btnDelete" type="button">מחק</button>' +
     '</div>';
+
 
   return card;
 }
